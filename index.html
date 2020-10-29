@@ -14,7 +14,27 @@
   </head>
   <body>
     <div class="container">
-      <form class="needs-validation" novalidate>
+      <form name="contact" method="POST" data-netlify="true">
+        <p>
+          <label>Your Name: <input type="text" name="name" /></label>   
+        </p>
+        <p>
+          <label>Your Email: <input type="email" name="email" /></label>
+        </p>
+        <p>
+          <label>Your Role: <select name="role[]" multiple>
+            <option value="leader">Leader</option>
+            <option value="follower">Follower</option>
+          </select></label>
+        </p>
+        <p>
+          <label>Message: <textarea name="message"></textarea></label>
+        </p>
+        <p>
+          <button type="submit">Send</button>
+        </p>
+      </form>
+      <!-- <form action="POST" class="needs-validation" novalidate data-netlify="true">
         <div class="form-row">
           <div class="col-md-6 mb-3">
             <label for="firstname">First name</label>
@@ -23,6 +43,7 @@
               class="form-control"
               id="firstname"
               placeholder="First name"
+              name="name"
               required
             />
           </div>
@@ -135,7 +156,7 @@
           >Contact Us</a
         >
       </div>
-    </div>
+    </div> -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
